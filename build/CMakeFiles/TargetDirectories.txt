@@ -1,0 +1,3 @@
+/home/santiagovera/ProyectoInferencia/build/CMakeFiles/maquinaDeInferencia.dir
+/home/santiagovera/ProyectoInferencia/build/CMakeFiles/edit_cache.dir
+/home/santiagovera/ProyectoInferencia/build/CMakeFiles/rebuild_cache.dir
