@@ -168,5 +168,6 @@ CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o: \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
+ /home/santiagovera/ProyectoInferencia/include/manejoDeClausulas.h \
  /home/santiagovera/ProyectoInferencia/include/Relacion.h \
  /home/santiagovera/ProyectoInferencia/include/ProposicionesConConectores.h

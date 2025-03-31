@@ -5,6 +5,9 @@ project(ProyectoInferencia)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# depuracion
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")  # -g: símbolos de depuración, -O0: sin optimización
+
 # Agregar el directorio de encabezados
 include_directories(include)
 
@@ -16,6 +19,7 @@ set(SOURCES
     src/procesarConector.cpp
     src/ProposicionesConConectores.cpp
     src/Relacion.cpp
+    src/Unificacion.cpp
 )
 
 # Crear el ejecutable

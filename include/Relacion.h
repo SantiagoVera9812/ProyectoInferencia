@@ -1,45 +1,32 @@
-// Relacion.h
 #pragma once
-#include <vector>
 #include <string>
+#include <vector>
 #include <iostream>
-#include <unordered_map>
-
-class Term {
-public:
-    std::string nombre;
-    bool esVariable;
-    
-    Term(std::string n = "", bool esVar = false);
-    bool operator==(const Term& other) const;
-    void mostrar() const;
-    std::string toString() const;
-
-    
-};
 
 class Relacion {
 private:
-    std::string predicado;
-    std::vector<Term> terminos;
+    std::string tipo_relacion;
+    std::string nombreFuncion;
+    std::vector<std::string> argumentos;
     bool esNegacion;
 
 public:
-    Relacion(std::string pred, std::vector<Term> terms, bool neg = false);
+    Relacion(std::string tipo_relacion, 
+             std::string nombreFuncion, 
+             const std::vector<std::string>& argumentos,
+             bool esNegacion = false);
+    
     Relacion();
-    // Métodos para unificación
-    bool unificar(const Relacion& otra, std::unordered_map<std::string, Term>& sustitucion) const;
-    Relacion aplicarSustitucion(const std::unordered_map<std::string, Term>& sustitucion) const;
-    bool esComplementaria(const Relacion& otra) const;
+    ~Relacion();
     
-    // Métodos existentes
     Relacion* toggleNegacion();
-    void mostrar() const;
     
-    // Getters
-    std::string getPredicado() const { return predicado; }
-    std::vector<Term> getTerminos() const { return terminos; }
-    bool getEsNegacion() const { return esNegacion; }
+    std::string getTipoRelacion() const;
+    std::string getNombreFuncion() const;
+    const std::vector<std::string>& getArgumentos() const;
+    bool getEsNegacion() const;
+
+    void mostrar() const;
 };
 
             

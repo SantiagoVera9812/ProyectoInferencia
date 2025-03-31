@@ -201,6 +201,30 @@ src/Relacion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.s
 .PHONY : src/Relacion.cpp.s
 
+src/Unificacion.o: src/Unificacion.cpp.o
+.PHONY : src/Unificacion.o
+
+# target to build an object file
+src/Unificacion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o
+.PHONY : src/Unificacion.cpp.o
+
+src/Unificacion.i: src/Unificacion.cpp.i
+.PHONY : src/Unificacion.i
+
+# target to preprocess a source file
+src/Unificacion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.i
+.PHONY : src/Unificacion.cpp.i
+
+src/Unificacion.s: src/Unificacion.cpp.s
+.PHONY : src/Unificacion.s
+
+# target to generate assembly for a file
+src/Unificacion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.s
+.PHONY : src/Unificacion.cpp.s
+
 src/manejoDeClausulas.o: src/manejoDeClausulas.cpp.o
 .PHONY : src/manejoDeClausulas.o
 
@@ -291,6 +315,9 @@ help:
 	@echo "... src/Relacion.o"
 	@echo "... src/Relacion.i"
 	@echo "... src/Relacion.s"
+	@echo "... src/Unificacion.o"
+	@echo "... src/Unificacion.i"
+	@echo "... src/Unificacion.s"
 	@echo "... src/manejoDeClausulas.o"
 	@echo "... src/manejoDeClausulas.i"
 	@echo "... src/manejoDeClausulas.s"

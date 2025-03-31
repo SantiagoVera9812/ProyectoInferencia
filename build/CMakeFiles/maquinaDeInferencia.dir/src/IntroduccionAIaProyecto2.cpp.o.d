@@ -169,7 +169,7 @@ CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o: \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /home/santiagovera/ProyectoInferencia/include/manejoDeClausulas.h \
- /home/santiagovera/ProyectoInferencia/include/ProposicionesConConectores.h \
  /home/santiagovera/ProyectoInferencia/include/Relacion.h \
+ /home/santiagovera/ProyectoInferencia/include/ProposicionesConConectores.h \
  /home/santiagovera/ProyectoInferencia/include/maquinaDeInferencia.h \
  /home/santiagovera/ProyectoInferencia/include/procesarConector.h

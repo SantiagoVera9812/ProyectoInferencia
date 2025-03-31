@@ -1,131 +1,47 @@
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <iostream>
+#include <sstream>
+#include "procesarConector.h"
 #include "manejoDeClausulas.h"
 #include "ProposicionesConConectores.h"
-#include "procesarConector.h"
 
-std::vector<std::string> negarLiteral(std::vector<std::string> literal);
-std::vector<std::string> negarClausula(std::vector<std::string> clausulaANegar, std::vector<std::string> palabrasAcciones);
-std::vector<ProposicionesConConectores> procesarConectoresLogicosNormalizados(std::vector<std::vector<std::string>> clausulas, std::vector<std::string> palabrasAcciones);
-ProposicionesConConectores procesarConectorLogico0(std::vector<std::string> clausula, std::vector<std::string> palabrasAcciones);
-std::vector<std::vector<std::string>> procesarConectorLogicoY(std::vector<std::string> clausula);
-
-std::vector<ProposicionesConConectores> procesarCondicionalesLogicos(std::vector<std::vector<std::string>> clausulas, std::vector<std::string> palabrasAcciones) {
-    std::vector<ProposicionesConConectores> proposiciones;
-    std::vector<std::string> bufferSi;
-    std::vector<std::string> bufferEntonces;
-    bool procesandoSi = false;
-    bool procesandoEntonces = false;
-
-    for (const auto& clausula : clausulas) {
-        bufferSi.clear();
-        bufferEntonces.clear();
-        procesandoSi = false;
-        procesandoEntonces = false;
-
-        for (size_t i = 0; i < clausula.size(); ++i) {
-            if (clausula[i] == "si") {
-                if (procesandoSi || procesandoEntonces) {
-                    throw std::runtime_error("Error: Se encontró 'si' sin un 'entonces' correspondiente.");
-                }
-                procesandoSi = true;
-                bufferSi.clear();
-            } else if (clausula[i] == "entonces") {
-                if (!procesandoSi) {
-                    throw std::runtime_error("Error: Se encontró 'entonces' sin un 'si' previo.");
-                }
-                procesandoEntonces = true;
-                procesandoSi = false;
-                bufferEntonces.clear();
-            } else {
-                if (procesandoSi) {
-                    bufferSi.push_back(clausula[i]);
-                } else if (procesandoEntonces) {
-                    bufferEntonces.push_back(clausula[i]);
-                } else {
-                    continue;
-                }
+// Función auxiliar para separar una cláusula por un conector específico
+std::vector<std::vector<std::string>> separarPorConector(const std::vector<std::string>& clausula, const std::string& conector) {
+    std::vector<std::vector<std::string>> resultado;
+    std::vector<std::string> buffer;
+    
+    for (const auto& palabra : clausula) {
+        if (palabra == conector) {
+            if (!buffer.empty()) {
+                resultado.push_back(buffer);
+                buffer.clear();
             }
+        } else {
+            buffer.push_back(palabra);
         }
-
-        if (!bufferSi.empty() && !bufferEntonces.empty()) {
-            try {
-
-                std::cout << "En buffers no vacios " << std::endl;
-                std::vector<std::string> relacionSiNegada = negarClausula(bufferSi, palabrasAcciones);
-                relacionSiNegada.push_back("o");
-
-                std::cout << "Revisamos si entonces al negar con negarClausula" << std::endl;
-
-                for(const auto& palabra: relacionSiNegada){
-                    std::cout << palabra << std::endl;
-                }
-
-                // Concatenar los elementos de relacionSiNegada con el buffer de entonces
-                relacionSiNegada.insert(relacionSiNegada.end(), bufferEntonces.begin(), bufferEntonces.end());
-
-                std::cout << "Revisamos si entonces al realizar un insert" << std::endl;
-                for(const auto& palabra: relacionSiNegada){
-                    std::cout << palabra << std::endl;
-                }
-
-                std::vector<std::vector<std::string>>vectorClausulaY = procesarConectorLogicoY(relacionSiNegada);
-
-                for(const auto& nuevaClausula: vectorClausulaY){
-                   
-                    ProposicionesConConectores proposicionSiEntonces = procesarConectorLogico0(nuevaClausula, palabrasAcciones);
-                    proposicionSiEntonces.mostrar();
-
-                    proposiciones.emplace_back(proposicionSiEntonces);
-                }
-
-                
-            } catch (const std::exception& e) {
-                std::cerr << "Error: " << e.what() << std::endl;
-            }
-        }
-
-        
-
-        if (bufferSi.empty() && bufferEntonces.empty()) {
-            try {
-
-                std::vector<std::vector<std::string>>vectorClausulaY = procesarConectorLogicoY(clausula);
-
-                for(const auto& nuevaClausula: vectorClausulaY){
-
-
-                   
-                    ProposicionesConConectores proposicionSiEntonces = procesarConectorLogico0(nuevaClausula, palabrasAcciones);
-                    proposicionSiEntonces.mostrar();
-
-                    proposiciones.emplace_back(proposicionSiEntonces);
-                }
-                
-            } catch (const std::exception& e) {
-                std::cerr << "Error: " << e.what() << std::endl;
-            }
-        } 
-
-        
-    }   
-
-    return proposiciones;
+    }
+    
+    if (!buffer.empty()) {
+        resultado.push_back(buffer);
+    }
+    
+    return resultado;
 }
 
-
+// Función para negar un literal (agrega o quita "no")
 std::vector<std::string> negarLiteral(std::vector<std::string> literal) {
-
     if (!literal.empty() && literal[0] == "no") {
-        literal.erase(literal.begin()); // Eliminar "no" si ya está presente
+        literal.erase(literal.begin());
     } else {
-        literal.insert(literal.begin(), "no"); // Agregar "no" al inicio si no está presente
+        literal.insert(literal.begin(), "no");
     }
     return literal;
 }
 
-
-std::vector<std::string> negarClausula(std::vector<std::string> clausulaANegar, std::vector<std::string> palabrasAcciones) {
+// Función para negar una cláusula completa
+std::vector<std::string> negarClausula(std::vector<std::string> clausulaANegar, std::vector<std::string>) {
     std::vector<std::string> resultado;
     std::vector<std::string> buffer;
     std::string operadorActual = "";
@@ -150,107 +66,109 @@ std::vector<std::string> negarClausula(std::vector<std::string> clausulaANegar, 
     }
     
     return resultado;
-
 }
 
-
-
-std::vector<ProposicionesConConectores> procesarConectoresLogicosNormalizados(std::vector<std::vector<std::string>> clausulas, std::vector<std::string> palabrasAcciones) {
-    std::vector<ProposicionesConConectores> proposiciones;
-   // Guardará el conector que está separando las proposiciones
-
-    for (const auto& clausula : clausulas) {
-        
-        ProposicionesConConectores proposicion = procesarConectorLogico0(clausula, palabrasAcciones);
-
-        proposiciones.emplace_back(proposicion);
-
-    }
-
-    return proposiciones;
-
+// Procesa cláusulas con conectores "y"
+std::vector<std::vector<std::string>> procesarConectorLogicoY(std::vector<std::string> clausula) {
+    return separarPorConector(clausula, "y");
 }
 
-
+// Procesa cláusulas básicas (sin condicionales)
 ProposicionesConConectores procesarConectorLogico0(std::vector<std::string> clausula, std::vector<std::string> palabrasAcciones) {
-
     std::vector<std::string> bufferProposicion;
     std::vector<Relacion> relacionesBuffer;
-    std::string conectorActual = ""; // Guardará el conector que está separando las proposiciones
+    std::string conectorActual = "";
 
-    
-        bufferProposicion.clear();
-        relacionesBuffer.clear();
-        conectorActual = "";
-
-        for (size_t i = 0; i < clausula.size(); ++i) {
-            if (clausula[i] == "o") {
-                // Si encontramos "o", procesamos lo que se acumuló antes
-                if (!bufferProposicion.empty()) {
-                    try {
-                        
-                        Relacion relacion = procesarClausulasLogicas(bufferProposicion, palabrasAcciones);
-                        relacionesBuffer.push_back(relacion);
-                    } catch (const std::exception& e) {
-                        std::cerr << "Error: " << e.what() << std::endl;
-                    }
-                    bufferProposicion.clear(); // Resetear el buffer
+    for (size_t i = 0; i < clausula.size(); ++i) {
+        if (clausula[i] == "o") {
+            if (!bufferProposicion.empty()) {
+                try {
+                    Relacion relacion = procesarClausulasLogicas(bufferProposicion, palabrasAcciones);
+                    relacionesBuffer.push_back(relacion);
+                } catch (const std::exception& e) {
+                    std::cerr << "Error procesando parte de cláusula: " << e.what() << "\n";
                 }
-                conectorActual = clausula[i]; // Asignamos "o" como conector
-            } else {
-                bufferProposicion.push_back(clausula[i]);
+                bufferProposicion.clear();
             }
+            conectorActual = clausula[i];
+        } else {
+            bufferProposicion.push_back(clausula[i]);
         }
+    }
 
-        // Procesar la última proposición de la cláusula si no termina en "o"
-        if (!bufferProposicion.empty()) {
-            try {
-                Relacion relacion = procesarClausulasLogicas(bufferProposicion, palabrasAcciones);
-                relacionesBuffer.push_back(relacion);
-            } catch (const std::exception& e) {
-                std::cerr << "Error: " << e.what() << std::endl;
-            }
+    if (!bufferProposicion.empty()) {
+        try {
+            Relacion relacion = procesarClausulasLogicas(bufferProposicion, palabrasAcciones);
+            relacionesBuffer.push_back(relacion);
+        } catch (const std::exception& e) {
+            std::cerr << "Error procesando parte de cláusula: " << e.what() << "\n";
         }
+    }
 
-        // craer Propocisiom
-        if (!relacionesBuffer.empty()) {
-            return ProposicionesConConectores(conectorActual, relacionesBuffer);
-        }else {
-            throw std::runtime_error("Error: No se encontraron relaciones en la cláusula.");
-        }
-    
-    
+    if (!relacionesBuffer.empty()) {
+        return ProposicionesConConectores(conectorActual, relacionesBuffer);
+    }
+    throw std::runtime_error("Cláusula vacía o no procesable");
 }
 
-
-std::vector<std::vector<std::string>> procesarConectorLogicoY(
-    std::vector<std::string> clausula){
-
-        std::vector<std::vector<std::string>> resultado;
-        std::vector<std::string> buffer;
-
-        for(const auto& palabra: clausula){
-            if(palabra == "y"){
-
-                if(!buffer.empty()){
-                    resultado.push_back(buffer);
-                    buffer.clear();
+// Función principal que procesa todos los condicionales lógicos
+std::vector<ProposicionesConConectores> procesarCondicionalesLogicos(
+    std::vector<std::vector<std::string>> clausulas, 
+    std::vector<std::string> palabrasAcciones) {
+    
+    std::vector<ProposicionesConConectores> proposiciones;
+    
+    for (const auto& clausula : clausulas) {
+        // Buscar "si" y "entonces"
+        auto itSi = std::find(clausula.begin(), clausula.end(), "si");
+        auto itEntonces = std::find(clausula.begin(), clausula.end(), "entonces");
+        
+        if (itSi != clausula.end() && itEntonces != clausula.end()) {
+            // Separar antecedente y consecuente
+            std::vector<std::string> antecedente(itSi + 1, itEntonces);
+            std::vector<std::string> consecuente(itEntonces + 1, clausula.end());
+            
+            // Procesar antecedente (parte después de "si")
+            auto partesAntecedente = separarPorConector(antecedente, "y");
+            
+            // Procesar consecuente (parte después de "entonces")
+            auto partesConsecuente = separarPorConector(consecuente, "o");
+            
+            // Convertir a forma normal conjuntiva
+            for (const auto& parteConsecuente : partesConsecuente) {
+                std::vector<std::string> nuevaClausula;
+                
+                // Negar cada parte del antecedente
+                for (const auto& parteAntecedente : partesAntecedente) {
+                    auto negado = negarLiteral(parteAntecedente);
+                    nuevaClausula.insert(nuevaClausula.end(), negado.begin(), negado.end());
+                    nuevaClausula.push_back("o");
                 }
-            } else {
-                buffer.push_back(palabra);
+                
+                // Añadir parte del consecuente
+                nuevaClausula.insert(nuevaClausula.end(), parteConsecuente.begin(), parteConsecuente.end());
+                
+                // Procesar la nueva cláusula
+                try {
+                    ProposicionesConConectores prop = procesarConectorLogico0(nuevaClausula, palabrasAcciones);
+                    proposiciones.push_back(prop);
+                } catch (const std::exception& e) {
+                    std::cerr << "Error procesando cláusula derivada: " << e.what() << "\n";
+                }
             }
-        } 
-
-        if(!buffer.empty()){
-            resultado.push_back(buffer);
+        } else {
+            // Procesar cláusulas sin condicionales
+            try {
+                ProposicionesConConectores prop = procesarConectorLogico0(clausula, palabrasAcciones);
+                proposiciones.push_back(prop);
+            } catch (const std::exception& e) {
+                std::cerr << "Error procesando cláusula simple: " << e.what() << "\n";
+            }
         }
-
-        if(resultado.empty() && !clausula.empty()){
-            resultado.push_back(clausula);
-        }
-
-        return resultado;
     }
+    
+    return proposiciones;
+}
 
 
 

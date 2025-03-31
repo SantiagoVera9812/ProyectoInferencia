@@ -1,101 +1,121 @@
-
 #include <stack>
 #include <vector>
+#include <tuple>
+#include <iostream>
 #include "maquinaDeInferencia.h"
 #include "ProposicionesConConectores.h"
 #include "Unificacion.h"
 
-void maquinaDeInferencia(std::vector<ProposicionesConConectores> clausulasProcesadas, Relacion* teorema) {
-    // Convertir el teorema a forma negada
-    ProposicionesConConectores objetivo;
-    objetivo.agregarRelacion(teorema->toggleNegacion());
-
-    // Pila para backtracking: {clausulas, objetivo, sustitucion}
-    std::stack<std::tuple<std::vector<ProposicionesConConectores>, 
-                         ProposicionesConConectores,
-                         std::unordered_map<std::string, Term>>> pila;
+bool sonComplementarias(const Relacion& a, const Relacion& b, Unificacion& unificacion) {
+    if (a.getNombreFuncion() != b.getNombreFuncion()) {
+        return false;
+    }
     
-    pila.push({clausulasProcesadas, objetivo, {}});
+    // Verificar si una es negación de la otra
+    if (a.getEsNegacion() == b.getEsNegacion()) {
+        return false;
+    }
+    
+    // Intentar unificar
+    Unificacion tempUnif = unificacion;
+    if (!tempUnif.unificar(a, b)) {
+        return false;
+    }
+    
+    // Si la unificación fue exitosa, aplicar las sustituciones
+    unificacion.combinar(tempUnif);
+    return true;
+}
+void maquinaDeInferencia(std::vector<ProposicionesConConectores> clausulasProcesadas, Relacion* teorema) {
+    if (teorema == nullptr) {
+        std::cerr << "Error: Teorema inválido (puntero nulo)\n";
+        return;
+    }
 
-    while (!pila.empty()) {
-        auto [clausulasRestantes, objetivoActual, sustitucion] = pila.top();
-        pila.pop();
+    ProposicionesConConectores proposicionActual;
+    proposicionActual.agregarRelacion(teorema);
 
-        // Mostrar estado actual
-        std::cout << "\nObjetivo actual: ";
-        objetivoActual.mostrar();
-        std::cout << "\nClausulas restantes: " << clausulasRestantes.size() << "\n";
+    std::stack<std::tuple<std::vector<ProposicionesConConectores>, 
+                         ProposicionesConConectores, 
+                         Unificacion>> estados;
+    
+    estados.push(std::make_tuple(clausulasProcesadas, proposicionActual, Unificacion()));
 
-        // Si no hay objetivo, hemos encontrado contradicción
-        if (objetivoActual.getRelaciones().empty()) {
-            std::cout << "✅ Contradicción encontrada - Teorema demostrado!\n";
-            if (!sustitucion.empty()) {
-                std::cout << "Sustituciones aplicadas:\n";
-                for (const auto& [var, term] : sustitucion) {
-                    std::cout << "?" << var << " = ";
-                    term.mostrar();
-                    std::cout << "\n";
-                }
+    while (!estados.empty()) {
+        auto estado = estados.top();
+        estados.pop();
+        
+        auto estadoActual = std::get<0>(estado);
+        auto proposicionActual = std::get<1>(estado);
+        auto unificacion = std::get<2>(estado);
+
+        // Aplicar sustituciones
+        for (auto& clausula : estadoActual) {
+            for (auto& relacion : clausula.getRelaciones()) {
+                relacion = unificacion.aplicarSustitucion(relacion);
             }
+        }
+        for (auto& relacion : proposicionActual.getRelaciones()) {
+            relacion = unificacion.aplicarSustitucion(relacion);
+        }
+
+        std::cout << "\nEstado actual:\n";
+        for (const auto& prop : estadoActual) prop.mostrar();
+        std::cout << "Proposición actual:\n";
+        proposicionActual.mostrar();
+        unificacion.mostrarSustituciones();
+
+        if (estadoActual.empty()) {
+            std::cout << "✅ El teorema ha sido demostrado!\n";
             return;
         }
 
-        // Tomar el primer literal del objetivo
-        Relacion litObjetivo = objetivoActual.getRelaciones()[0];
-        ProposicionesConConectores nuevoObjetivo = objetivoActual;
-        nuevoObjetivo.eliminarRelacion(0);
+        bool cambioRealizado = false;
+        for (size_t i = 0; i < estadoActual.size() && !cambioRealizado; ++i) {
+            auto& clausula = estadoActual[i];
+            auto& relacionesClausula = clausula.getRelaciones();
 
-        // Buscar en las cláusulas
-        for (size_t i = 0; i < clausulasRestantes.size(); ++i) {
-            auto clausula = clausulasRestantes[i];
-            
-            for (size_t j = 0; j < clausula.getRelaciones().size(); ++j) {
-                Relacion litClausula = clausula.getRelaciones()[j];
-                
-                // Intentar unificación
-                std::unordered_map<std::string, Term> nuevaSust = sustitucion;
-                if (Unificador::unificar(litObjetivo, litClausula, nuevaSust)) {
-                    std::cout << "⚡ Unificación exitosa entre:\n  ";
-                    litObjetivo.mostrar();
-                    std::cout << "\n  y\n  ";
-                    litClausula.mostrar();
-                    std::cout << "\n";
+            for (size_t j = 0; j < relacionesClausula.size() && !cambioRealizado; ++j) {
+                auto& relClausula = relacionesClausula[j];
 
-                    // Aplicar sustitución a la cláusula
-                    ProposicionesConConectores clausulaUnificada;
-                    for (const auto& rel : clausula.getRelaciones()) {
-                        if (!(rel == litClausula)) {
-                            clausulaUnificada.agregarRelacion(
-                                new Relacion(rel.aplicarSustitucion(nuevaSust)));
+                for (size_t k = 0; k < proposicionActual.getRelaciones().size() && !cambioRealizado; ++k) {
+                    auto& relActual = proposicionActual.getRelaciones()[k];
+                    
+                    Unificacion nuevaUnificacion = unificacion;
+                    if (sonComplementarias(relClausula, relActual, nuevaUnificacion)) {
+                        std::cout << "\n⚡ Relaciones complementarias encontradas:\n";
+                        relClausula.mostrar();
+                        relActual.mostrar();
+
+                        auto nuevoEstado = estadoActual;
+                        auto nuevaProposicion = proposicionActual;
+
+                        nuevoEstado[i].eliminarRelacion(j);
+                        nuevaProposicion.eliminarRelacion(k);
+
+                        if (nuevoEstado[i].getRelaciones().empty()) {
+                            nuevoEstado.erase(nuevoEstado.begin() + i);
                         }
+
+                        if (nuevaProposicion.getRelaciones().empty()) {
+                            if (nuevoEstado.empty()) {
+                                std::cout << "✅ El teorema ha sido demostrado!\n";
+                                return;
+                            }
+                            nuevaProposicion = nuevoEstado[0];
+                            nuevoEstado.erase(nuevoEstado.begin());
+                        }
+
+                        estados.push(std::make_tuple(nuevoEstado, nuevaProposicion, nuevaUnificacion));
+                        cambioRealizado = true;
                     }
-
-                    // Aplicar sustitución al objetivo restante
-                    ProposicionesConConectores objetivoUnificado;
-                    for (const auto& rel : nuevoObjetivo.getRelaciones()) {
-                        objetivoUnificado.agregarRelacion(
-                            new Relacion(rel.aplicarSustitucion(nuevaSust)));
-                    }
-
-                    // Combinar con la cláusula unificada
-                    for (const auto& rel : clausulaUnificada.getRelaciones()) {
-                        objetivoUnificado.agregarRelacion(new Relacion(rel));
-                    }
-
-                    // Crear nuevo conjunto de cláusulas (eliminando la usada)
-                    auto nuevasClausulas = clausulasRestantes;
-                    nuevasClausulas.erase(nuevasClausulas.begin() + i);
-
-                    // Agregar a la pila
-                    pila.push({nuevasClausulas, objetivoUnificado, nuevaSust});
                 }
             }
         }
     }
 
-    std::cout << "❌ No se pudo demostrar el teorema\n";
+    std::cout << "❌ No se pudo demostrar el teorema.\n";
 }
-
 
 
 

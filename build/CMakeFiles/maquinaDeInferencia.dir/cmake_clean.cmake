@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o.d"
   "CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o"
   "CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o.d"
+  "CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o"
+  "CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o.d"
   "CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o"
   "CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o.d"
   "CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o"
