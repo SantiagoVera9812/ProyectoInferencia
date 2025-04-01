@@ -1,5 +1,5 @@
-CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o: \
- /home/santiagovera/ProyectoInferencia/src/IntroduccionAIaProyecto2.cpp \
+CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o: \
+ /home/santiagovera/Documentos/ProyectoInferencia/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -168,8 +168,8 @@ CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o: \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
- /home/santiagovera/ProyectoInferencia/include/manejoDeClausulas.h \
- /home/santiagovera/ProyectoInferencia/include/Relacion.h \
- /home/santiagovera/ProyectoInferencia/include/ProposicionesConConectores.h \
- /home/santiagovera/ProyectoInferencia/include/maquinaDeInferencia.h \
- /home/santiagovera/ProyectoInferencia/include/procesarConector.h
+ /home/santiagovera/Documentos/ProyectoInferencia/include/manejoDeClausulas.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/Relacion.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/ProposicionesConConectores.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/maquinaDeInferencia.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/procesarConector.h

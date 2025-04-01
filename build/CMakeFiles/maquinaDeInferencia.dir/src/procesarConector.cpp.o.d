@@ -1,5 +1,5 @@
 CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o: \
- /home/santiagovera/ProyectoInferencia/src/procesarConector.cpp \
+ /home/santiagovera/Documentos/ProyectoInferencia/src/procesarConector.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -174,7 +174,7 @@ CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/santiagovera/ProyectoInferencia/include/procesarConector.h \
- /home/santiagovera/ProyectoInferencia/include/ProposicionesConConectores.h \
- /home/santiagovera/ProyectoInferencia/include/Relacion.h \
- /home/santiagovera/ProyectoInferencia/include/manejoDeClausulas.h
+ /home/santiagovera/Documentos/ProyectoInferencia/include/procesarConector.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/ProposicionesConConectores.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/Relacion.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/manejoDeClausulas.h

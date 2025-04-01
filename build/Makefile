@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/santiagovera/ProyectoInferencia
+CMAKE_SOURCE_DIR = /home/santiagovera/Documentos/ProyectoInferencia
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/santiagovera/ProyectoInferencia/build
+CMAKE_BINARY_DIR = /home/santiagovera/Documentos/ProyectoInferencia/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiagovera/ProyectoInferencia/build/CMakeFiles /home/santiagovera/ProyectoInferencia/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles /home/santiagovera/Documentos/ProyectoInferencia/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiagovera/ProyectoInferencia/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,30 +128,6 @@ maquinaDeInferencia: cmake_check_build_system
 maquinaDeInferencia/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/build
 .PHONY : maquinaDeInferencia/fast
-
-src/IntroduccionAIaProyecto2.o: src/IntroduccionAIaProyecto2.cpp.o
-.PHONY : src/IntroduccionAIaProyecto2.o
-
-# target to build an object file
-src/IntroduccionAIaProyecto2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o
-.PHONY : src/IntroduccionAIaProyecto2.cpp.o
-
-src/IntroduccionAIaProyecto2.i: src/IntroduccionAIaProyecto2.cpp.i
-.PHONY : src/IntroduccionAIaProyecto2.i
-
-# target to preprocess a source file
-src/IntroduccionAIaProyecto2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.i
-.PHONY : src/IntroduccionAIaProyecto2.cpp.i
-
-src/IntroduccionAIaProyecto2.s: src/IntroduccionAIaProyecto2.cpp.s
-.PHONY : src/IntroduccionAIaProyecto2.s
-
-# target to generate assembly for a file
-src/IntroduccionAIaProyecto2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.s
-.PHONY : src/IntroduccionAIaProyecto2.cpp.s
 
 src/ProposicionesConConectores.o: src/ProposicionesConConectores.cpp.o
 .PHONY : src/ProposicionesConConectores.o
@@ -224,6 +200,30 @@ src/Unificacion.s: src/Unificacion.cpp.s
 src/Unificacion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.s
 .PHONY : src/Unificacion.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maquinaDeInferencia.dir/build.make CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 src/manejoDeClausulas.o: src/manejoDeClausulas.cpp.o
 .PHONY : src/manejoDeClausulas.o
@@ -306,9 +306,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... maquinaDeInferencia"
-	@echo "... src/IntroduccionAIaProyecto2.o"
-	@echo "... src/IntroduccionAIaProyecto2.i"
-	@echo "... src/IntroduccionAIaProyecto2.s"
 	@echo "... src/ProposicionesConConectores.o"
 	@echo "... src/ProposicionesConConectores.i"
 	@echo "... src/ProposicionesConConectores.s"
@@ -318,6 +315,9 @@ help:
 	@echo "... src/Unificacion.o"
 	@echo "... src/Unificacion.i"
 	@echo "... src/Unificacion.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... src/manejoDeClausulas.o"
 	@echo "... src/manejoDeClausulas.i"
 	@echo "... src/manejoDeClausulas.s"

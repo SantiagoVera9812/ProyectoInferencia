@@ -1,5 +1,5 @@
 CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o: \
- /home/santiagovera/ProyectoInferencia/src/manejoDeClausulas.cpp \
+ /home/santiagovera/Documentos/ProyectoInferencia/src/manejoDeClausulas.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -168,6 +168,6 @@ CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o: \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/santiagovera/ProyectoInferencia/include/manejoDeClausulas.h \
- /home/santiagovera/ProyectoInferencia/include/Relacion.h \
- /home/santiagovera/ProyectoInferencia/include/ProposicionesConConectores.h
+ /home/santiagovera/Documentos/ProyectoInferencia/include/manejoDeClausulas.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/Relacion.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/ProposicionesConConectores.h

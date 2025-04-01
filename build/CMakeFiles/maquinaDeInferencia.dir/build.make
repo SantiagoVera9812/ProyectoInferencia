@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/santiagovera/ProyectoInferencia
+CMAKE_SOURCE_DIR = /home/santiagovera/Documentos/ProyectoInferencia
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/santiagovera/ProyectoInferencia/build
+CMAKE_BINARY_DIR = /home/santiagovera/Documentos/ProyectoInferencia/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/maquinaDeInferencia.dir/depend.make
@@ -69,107 +69,107 @@ include CMakeFiles/maquinaDeInferencia.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/maquinaDeInferencia.dir/flags.make
 
-CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o: CMakeFiles/maquinaDeInferencia.dir/flags.make
-CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o: /home/santiagovera/ProyectoInferencia/src/IntroduccionAIaProyecto2.cpp
-CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o: CMakeFiles/maquinaDeInferencia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o -c /home/santiagovera/ProyectoInferencia/src/IntroduccionAIaProyecto2.cpp
+CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o: CMakeFiles/maquinaDeInferencia.dir/flags.make
+CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o: /home/santiagovera/Documentos/ProyectoInferencia/src/main.cpp
+CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o: CMakeFiles/maquinaDeInferencia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o -c /home/santiagovera/Documentos/ProyectoInferencia/src/main.cpp
 
-CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/ProyectoInferencia/src/IntroduccionAIaProyecto2.cpp > CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.i
+CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/Documentos/ProyectoInferencia/src/main.cpp > CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.i
 
-CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/ProyectoInferencia/src/IntroduccionAIaProyecto2.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.s
+CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/Documentos/ProyectoInferencia/src/main.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.s
 
 CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o: CMakeFiles/maquinaDeInferencia.dir/flags.make
-CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o: /home/santiagovera/ProyectoInferencia/src/manejoDeClausulas.cpp
+CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o: /home/santiagovera/Documentos/ProyectoInferencia/src/manejoDeClausulas.cpp
 CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o: CMakeFiles/maquinaDeInferencia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o -c /home/santiagovera/ProyectoInferencia/src/manejoDeClausulas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o -c /home/santiagovera/Documentos/ProyectoInferencia/src/manejoDeClausulas.cpp
 
 CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/ProyectoInferencia/src/manejoDeClausulas.cpp > CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/Documentos/ProyectoInferencia/src/manejoDeClausulas.cpp > CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.i
 
 CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/ProyectoInferencia/src/manejoDeClausulas.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/Documentos/ProyectoInferencia/src/manejoDeClausulas.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.s
 
 CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o: CMakeFiles/maquinaDeInferencia.dir/flags.make
-CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o: /home/santiagovera/ProyectoInferencia/src/maquinaDeInferencia.cpp
+CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o: /home/santiagovera/Documentos/ProyectoInferencia/src/maquinaDeInferencia.cpp
 CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o: CMakeFiles/maquinaDeInferencia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o -c /home/santiagovera/ProyectoInferencia/src/maquinaDeInferencia.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o -c /home/santiagovera/Documentos/ProyectoInferencia/src/maquinaDeInferencia.cpp
 
 CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/ProyectoInferencia/src/maquinaDeInferencia.cpp > CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/Documentos/ProyectoInferencia/src/maquinaDeInferencia.cpp > CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.i
 
 CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/ProyectoInferencia/src/maquinaDeInferencia.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/Documentos/ProyectoInferencia/src/maquinaDeInferencia.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.s
 
 CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o: CMakeFiles/maquinaDeInferencia.dir/flags.make
-CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o: /home/santiagovera/ProyectoInferencia/src/procesarConector.cpp
+CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o: /home/santiagovera/Documentos/ProyectoInferencia/src/procesarConector.cpp
 CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o: CMakeFiles/maquinaDeInferencia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o -c /home/santiagovera/ProyectoInferencia/src/procesarConector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o -c /home/santiagovera/Documentos/ProyectoInferencia/src/procesarConector.cpp
 
 CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/ProyectoInferencia/src/procesarConector.cpp > CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/Documentos/ProyectoInferencia/src/procesarConector.cpp > CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.i
 
 CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/ProyectoInferencia/src/procesarConector.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/Documentos/ProyectoInferencia/src/procesarConector.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.s
 
 CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o: CMakeFiles/maquinaDeInferencia.dir/flags.make
-CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o: /home/santiagovera/ProyectoInferencia/src/ProposicionesConConectores.cpp
+CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o: /home/santiagovera/Documentos/ProyectoInferencia/src/ProposicionesConConectores.cpp
 CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o: CMakeFiles/maquinaDeInferencia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o -c /home/santiagovera/ProyectoInferencia/src/ProposicionesConConectores.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o -c /home/santiagovera/Documentos/ProyectoInferencia/src/ProposicionesConConectores.cpp
 
 CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/ProyectoInferencia/src/ProposicionesConConectores.cpp > CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/Documentos/ProyectoInferencia/src/ProposicionesConConectores.cpp > CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.i
 
 CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/ProyectoInferencia/src/ProposicionesConConectores.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/Documentos/ProyectoInferencia/src/ProposicionesConConectores.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.s
 
 CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o: CMakeFiles/maquinaDeInferencia.dir/flags.make
-CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o: /home/santiagovera/ProyectoInferencia/src/Relacion.cpp
+CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o: /home/santiagovera/Documentos/ProyectoInferencia/src/Relacion.cpp
 CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o: CMakeFiles/maquinaDeInferencia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o -c /home/santiagovera/ProyectoInferencia/src/Relacion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o -c /home/santiagovera/Documentos/ProyectoInferencia/src/Relacion.cpp
 
 CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/ProyectoInferencia/src/Relacion.cpp > CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/Documentos/ProyectoInferencia/src/Relacion.cpp > CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.i
 
 CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/ProyectoInferencia/src/Relacion.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/Documentos/ProyectoInferencia/src/Relacion.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.s
 
 CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o: CMakeFiles/maquinaDeInferencia.dir/flags.make
-CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o: /home/santiagovera/ProyectoInferencia/src/Unificacion.cpp
+CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o: /home/santiagovera/Documentos/ProyectoInferencia/src/Unificacion.cpp
 CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o: CMakeFiles/maquinaDeInferencia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o -c /home/santiagovera/ProyectoInferencia/src/Unificacion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o -MF CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o.d -o CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o -c /home/santiagovera/Documentos/ProyectoInferencia/src/Unificacion.cpp
 
 CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/ProyectoInferencia/src/Unificacion.cpp > CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiagovera/Documentos/ProyectoInferencia/src/Unificacion.cpp > CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.i
 
 CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/ProyectoInferencia/src/Unificacion.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiagovera/Documentos/ProyectoInferencia/src/Unificacion.cpp -o CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.s
 
 # Object files for target maquinaDeInferencia
 maquinaDeInferencia_OBJECTS = \
-"CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o" \
+"CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o" \
 "CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o" \
 "CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o" \
 "CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o" \
@@ -180,7 +180,7 @@ maquinaDeInferencia_OBJECTS = \
 # External object files for target maquinaDeInferencia
 maquinaDeInferencia_EXTERNAL_OBJECTS =
 
-maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/src/IntroduccionAIaProyecto2.cpp.o
+maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/src/main.cpp.o
 maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/src/manejoDeClausulas.cpp.o
 maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o
 maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/src/procesarConector.cpp.o
@@ -189,7 +189,7 @@ maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/src/Relacion.cpp.o
 maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o
 maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/build.make
 maquinaDeInferencia: CMakeFiles/maquinaDeInferencia.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/santiagovera/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable maquinaDeInferencia"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable maquinaDeInferencia"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/maquinaDeInferencia.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -201,6 +201,6 @@ CMakeFiles/maquinaDeInferencia.dir/clean:
 .PHONY : CMakeFiles/maquinaDeInferencia.dir/clean
 
 CMakeFiles/maquinaDeInferencia.dir/depend:
-	cd /home/santiagovera/ProyectoInferencia/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/santiagovera/ProyectoInferencia /home/santiagovera/ProyectoInferencia /home/santiagovera/ProyectoInferencia/build /home/santiagovera/ProyectoInferencia/build /home/santiagovera/ProyectoInferencia/build/CMakeFiles/maquinaDeInferencia.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/santiagovera/Documentos/ProyectoInferencia/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/santiagovera/Documentos/ProyectoInferencia /home/santiagovera/Documentos/ProyectoInferencia /home/santiagovera/Documentos/ProyectoInferencia/build /home/santiagovera/Documentos/ProyectoInferencia/build /home/santiagovera/Documentos/ProyectoInferencia/build/CMakeFiles/maquinaDeInferencia.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/maquinaDeInferencia.dir/depend
 

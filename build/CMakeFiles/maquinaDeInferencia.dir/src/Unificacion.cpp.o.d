@@ -1,8 +1,8 @@
 CMakeFiles/maquinaDeInferencia.dir/src/Unificacion.cpp.o: \
- /home/santiagovera/ProyectoInferencia/src/Unificacion.cpp \
+ /home/santiagovera/Documentos/ProyectoInferencia/src/Unificacion.cpp \
  /usr/include/stdc-predef.h \
- /home/santiagovera/ProyectoInferencia/include/Unificacion.h \
- /home/santiagovera/ProyectoInferencia/include/Relacion.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/Unificacion.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/Relacion.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

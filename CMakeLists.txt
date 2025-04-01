@@ -13,7 +13,7 @@ include_directories(include)
 
 # Agregar los archivos fuente
 set(SOURCES
-    src/IntroduccionAIaProyecto2.cpp
+    src/main.cpp
     src/manejoDeClausulas.cpp
     src/maquinaDeInferencia.cpp
     src/procesarConector.cpp

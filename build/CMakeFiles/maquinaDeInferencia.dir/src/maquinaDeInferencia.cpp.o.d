@@ -1,5 +1,5 @@
 CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o: \
- /home/santiagovera/ProyectoInferencia/src/maquinaDeInferencia.cpp \
+ /home/santiagovera/Documentos/ProyectoInferencia/src/maquinaDeInferencia.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/stack \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -155,10 +155,10 @@ CMakeFiles/maquinaDeInferencia.dir/src/maquinaDeInferencia.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/santiagovera/ProyectoInferencia/include/maquinaDeInferencia.h \
- /home/santiagovera/ProyectoInferencia/include/ProposicionesConConectores.h \
- /home/santiagovera/ProyectoInferencia/include/Relacion.h \
- /home/santiagovera/ProyectoInferencia/include/Unificacion.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/maquinaDeInferencia.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/ProposicionesConConectores.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/Relacion.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/Unificacion.h \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/hashtable.h \

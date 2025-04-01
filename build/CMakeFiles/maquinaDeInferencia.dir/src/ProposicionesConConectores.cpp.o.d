@@ -1,7 +1,7 @@
 CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o: \
- /home/santiagovera/ProyectoInferencia/src/ProposicionesConConectores.cpp \
+ /home/santiagovera/Documentos/ProyectoInferencia/src/ProposicionesConConectores.cpp \
  /usr/include/stdc-predef.h \
- /home/santiagovera/ProyectoInferencia/include/ProposicionesConConectores.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/ProposicionesConConectores.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -130,7 +130,7 @@ CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/santiagovera/ProyectoInferencia/include/Relacion.h \
+ /home/santiagovera/Documentos/ProyectoInferencia/include/Relacion.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
@@ -156,4 +156,4 @@ CMakeFiles/maquinaDeInferencia.dir/src/ProposicionesConConectores.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/santiagovera/ProyectoInferencia/include/manejoDeClausulas.h
+ /home/santiagovera/Documentos/ProyectoInferencia/include/manejoDeClausulas.h
